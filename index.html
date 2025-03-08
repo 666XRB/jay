@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杰伦Music</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 播放器控制面板 -->
+    <div class="player-panel">
+      <div class="now-playing">当前播放：</div> <!-- 初始文本将被替换 -->
+      <div class="time-display">
+        <span class="current-time ">0:00</span>
+        <div class="progress-bar-container ">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <span class="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button id="prevBtn" class="control-btn">上一首</button>
+        <button id="playPauseBtn" class="control-btn">播放</button>
+        <button id="nextBtn" class="control-btn">下一首</button>
+        <button id="randomBtn" class="control-btn">随机</button>
+        <span class="theme-text">笑一个吧，功成名就不是目的。———《稻香》</span>
+      </div>
+      <div class="volume-control">
+        <label for="volume">音量：</label>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+      </div>
+    </div>
+
+    <!-- 搜索区域 -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索歌曲...">
+      <!-- 删除以下按钮代码 -->
+    </div>
+
+    <!-- 主内容区域 -->
+    <div class="main-content">
+      <!-- 歌曲列表 -->
+      <div class="playlist-container">
+        <h3>播放列表</h3>
+        <ul id="songList" class="song-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/core/resourceLoader.js"></script>
+  <script src="js/core/audioManager.js"></script>
+  <script src="js/modules/playerController.js"></script>
+  <script src="js/modules/playlistManager.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+  <!-- 页脚 -->
+  <footer class="app-footer">
+    <a href="http://xurunbo.top" target="_blank">PoweredBy————xrb仅供听歌和放松</a>
+  </footer>
+</div></html>
